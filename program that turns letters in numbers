@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+	int t,x,y;
+	int s2[24],nomen[30]; 
+	char nome[30],s1[24]="abcdefghijlmnopqrstuvxz";
+	for(x=0;x<24;x++)
+	{
+		s2[x]=x+1;
+	}
+	for(x=0;x<23;x++)
+	{
+		printf("|%c",s1[x]);
+		printf("=%d|",s2[x]);	
+		printf("\n");
+	}
+	printf("digite o seu nome \n");
+	fgets(nome,30,stdin);
+	t=strlen(nome);
+	printf("o tamnho do nome =%d \n",t);
+	for(x=0;x<t;x++)
+	{
+		for(y=0;y<24;y++)
+		{
+			if(nome[x]==s1[y])
+			{
+				printf("%d",s2[y]);
+			}
+		}
+	}
+	
+
+	
+	printf(" \n digite qualquer tecla para acabar o programa \n");
+	scanf("%d",&t);
+	return(0);
+}
