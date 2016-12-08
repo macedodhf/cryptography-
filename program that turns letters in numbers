@@ -6,7 +6,7 @@ int main()
 	int t,x,y;  /* t será a variável para pegar o tamanho da string , x será um variável usada para laço de repetição(for) */
 	             /*y será utilizada para outro laço de repetição dentro do primeiro laço */ 
 	int s2[24]; /* esse vetor receberá um sequência de número e será últil para relacionar uma letra a cada número*/
-	char nome[30],s1[24]="abcdefghijlmnopqrstuvxz";
+	char nome[30],s1[24]="abcdefghijlmnopqrstuvxz",outros[28]="!@#$%¨&*()_-=+[]{}?/.,\|'";
 	for(x=0;x<24;x++)
 	{
 		s2[x]=x+1;
@@ -17,21 +17,33 @@ int main()
 		printf("=%d|",s2[x]);	
 		printf("\n");
 	}
-	printf("digite o seu nome \n");
+	printf("digite o sua mensagem (maximo 100 digitos) \n");
 	fgets(nome,30,stdin);
 	t=strlen(nome);
-	printf("o tamnho do nome =%d \n",t);
+	printf("o tamanho da sua mensagem =%d \n",t);
 	for(x=0;x<t;x++)
 	{
-		for(y=0;y<24;y++)
-		{
-			if(nome[x]==s1[y]) /* vai comparar a letra da string  com a série de letras da string s1 */
-			{                  /*,quando forem iguais vai imprimir o número relacionado a essa letra */                         
-				printf("%d",s2[y]);
+		if(nome[x]==' ')/*esse if irá detectar espaços em branco */
+			printf(" ");
+		else
+		{	
+			for(y=0;y<28;y++)
+			{	
+				if(nome[x]==s1[y])/* vai comparar a letra da string  com a série de letras da string s1 ,quando forem iguais vai imprimir o número relacionado a essa letra */  
+				{									                          
+					printf("%d",s2[y]);
+				}
+				else
+				{
+						if(nome[x]==outros[y])
+						printf("%c",outros[y]);
+				}
 			}
-		}
+		}	
+		
 	}
 	
+
 
 	
 	printf(" \n digite qualquer tecla para acabar o programa \n");
