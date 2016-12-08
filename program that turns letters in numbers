@@ -4,7 +4,7 @@
 int main()
 {
 	int t,x,y;  /* t será a variável para pegar o tamanho da string , x será um variável usada para laço de repetição(for) */
-	             y será utilizada para outro laço de repetição dentro do primeiro laço */ 
+	             /*y será utilizada para outro laço de repetição dentro do primeiro laço */ 
 	int s2[24]; /* esse vetor receberá um sequência de número e será últil para relacionar uma letra a cada número*/
 	char nome[30],s1[24]="abcdefghijlmnopqrstuvxz";
 	for(x=0;x<24;x++)
