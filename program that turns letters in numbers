@@ -3,14 +3,15 @@
 #include<string.h>
 int main()
 {
-	int t,x,y;
-	int s2[24],nomen[30]; 
+	int t,x,y;  /* t será a variável para pegar o tamanho da string , x será um variável usada para laço de repetição(for) */
+	             y será utilizada para outro laço de repetição dentro do primeiro laço */ 
+	int s2[24]; /* esse vetor receberá um sequência de número e será últil para relacionar uma letra a cada número*/
 	char nome[30],s1[24]="abcdefghijlmnopqrstuvxz";
 	for(x=0;x<24;x++)
 	{
 		s2[x]=x+1;
 	}
-	for(x=0;x<23;x++)
+	for(x=0;x<23;x++)  /* essa estrutura de repetição vai gerar uma tabela que mostra a relação letra e número */
 	{
 		printf("|%c",s1[x]);
 		printf("=%d|",s2[x]);	
@@ -24,8 +25,8 @@ int main()
 	{
 		for(y=0;y<24;y++)
 		{
-			if(nome[x]==s1[y])
-			{
+			if(nome[x]==s1[y]) /* vai comparar a letra da string  com a série de letras da string s1 */
+			{                  /*,quando forem iguais vai imprimir o número relacionado a essa letra */                         
 				printf("%d",s2[y]);
 			}
 		}
